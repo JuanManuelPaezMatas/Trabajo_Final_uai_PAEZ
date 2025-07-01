@@ -1,0 +1,12 @@
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\bin\Debug\LavaderoAutos2.exe.config
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\bin\Debug\LavaderoAutos2.exe
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\bin\Debug\LavaderoAutos2.pdb
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.csproj.AssemblyReference.cache
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.Properties.Resources.resources
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.csproj.GenerateResource.cache
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.csproj.CoreCompileInputs.cache
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.exe
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.pdb
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.UI.frmLogin.resources
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.FrmMain.resources
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.UI.FrmCRUDVehicles.resources
