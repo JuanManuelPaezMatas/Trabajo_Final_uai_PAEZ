@@ -46,6 +46,7 @@ namespace LavaderoAutos2.Services
 				if (users.Count < 1)
                 {
 					throw new Exception("El usuario no existe");
+					// esto es un comentario
 				}
 				else
 				{
