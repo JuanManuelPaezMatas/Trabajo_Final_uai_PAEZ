@@ -11,7 +11,7 @@ namespace LavaderoAutos2.Entities
         Car,Truck,Bike,Motorcycle
 
     }
-    internal class Vehicle:IEntity
+    public class Vehicle:IEntity
     {
         public int Id { get; set; }
         public string Name {  get; set; }

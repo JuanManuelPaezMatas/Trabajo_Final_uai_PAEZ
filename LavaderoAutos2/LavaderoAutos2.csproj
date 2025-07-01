@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicalLayer\BLLUser.cs" />
+    <Compile Include="BusinessLogicalLayer\BLLVehicle.cs" />
     <Compile Include="DataAccessLayer\BaseDataAccessLayer.cs" />
     <Compile Include="DataAccessLayer\DALUser.cs" />
     <Compile Include="DataAccessLayer\DALVehicle.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Entities\Vehicle.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\VehicleService.cs" />
     <Compile Include="UI\FrmCRUDVehicles.cs">
       <SubType>Form</SubType>
     </Compile>

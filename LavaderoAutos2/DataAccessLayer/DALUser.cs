@@ -149,7 +149,7 @@ namespace LavaderoAutos2.DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public override int delete(IEntity entity)
+        public override int delete(int id)
         {
             throw new NotImplementedException();
         }

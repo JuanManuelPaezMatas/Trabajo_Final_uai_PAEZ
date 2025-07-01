@@ -70,7 +70,7 @@ namespace LavaderoAutos2.DataAccessLayer
 
         public abstract int insert(IEntity entity);
         public abstract int update(IEntity entity);
-        public abstract int delete(IEntity entity);
+        public abstract int delete(int id);
 
         public abstract  List<IEntity> getEntities(IEntity entity);
 
