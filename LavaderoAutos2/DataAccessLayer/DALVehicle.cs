@@ -7,14 +7,25 @@ using LavaderoAutos2.Entities;
 using System.Data.SqlClient;
 using System.Data;
 using System.Runtime.InteropServices;
+using LavaderoAutos2.BusinessLogicalLayer;
 
 
 namespace LavaderoAutos2.DataAccessLayer
 {
     public class DALVehicle : BaseDataAccessLayer
-    {   
+    {
         //copiar el singleton  de daluser
-
+        private static DALVehicle dalVehicle;
+        //Esto es commit 5
+        public static DALVehicle Instance
+        {
+            get
+            {
+                if (dalVehicle == null)
+                    dalVehicle = new DALVehicle();
+                return dalVehicle;
+            }
+        }
 
 
         public override int delete(int id)
