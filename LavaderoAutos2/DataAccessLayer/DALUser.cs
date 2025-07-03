@@ -23,11 +23,7 @@ namespace LavaderoAutos2.DataAccessLayer
 
         }
        
-        /// <summary>
-        /// Devuelve todoslos usuarios de la base de datos. Permite obtener un unico usuario.
-        /// </summary>
-        /// <param name="user">opcional.pasarlo cuando se quiera obtener un unico usuario</param>
-        /// <returns>Devuelve una lista de usuarios.Una lista de objetos usuarios.si se paso el parametro user devolvera solo ese usuario.</returns>
+        
         public List<User> getUsers(string user=null)
         {
             try
@@ -58,13 +54,13 @@ namespace LavaderoAutos2.DataAccessLayer
                 while (dr.Read())
                 {
                     
-                    User u = new User();  // instanciacion de variable.Reserva espacio en memoria.
-                    // Asignamos valores de la base de datos a los modelos de los entities de mi programa
+                    User u = new User(); 
+                   
                     u.Name = dr.GetString(1);      
                     u.UserCode= dr.GetString(2);
                     u.Password= dr.GetString(3);
                     u.Id= dr.GetInt32(0);
-                    // sin la linea 64, todo lo que lei y capture en los pasos anteriores lo perdere.
+                   
                     lstUser.Add(u);
                     
                 }

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.mnuCrudVehicle = new System.Windows.Forms.MenuStrip();
+            this.btnNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSearch = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
@@ -37,10 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCrudVehicle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,32 @@
             this.mnuCrudVehicle.Size = new System.Drawing.Size(441, 24);
             this.mnuCrudVehicle.TabIndex = 0;
             this.mnuCrudVehicle.Text = "menuStrip1";
+            // 
+            // btnNew
+            // 
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(54, 20);
+            this.btnNew.Text = "Nuevo";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(61, 20);
+            this.btnSave.Text = "Guardar";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(54, 20);
+            this.btnSearch.Text = "Buscar";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(62, 20);
+            this.btnDelete.Text = "Eliminar";
             // 
             // txtName
             // 
@@ -122,31 +148,6 @@
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tipo";
-            // 
-            // btnNew
-            // 
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(50, 20);
-            this.btnNew.Text = "Crear ";
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(61, 20);
-            this.btnSave.Text = "Guardar";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(54, 20);
-            this.btnSearch.Text = "Buscar";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(62, 20);
-            this.btnDelete.Text = "Eliminar";
             // 
             // FrmCRUDVehicles
             // 

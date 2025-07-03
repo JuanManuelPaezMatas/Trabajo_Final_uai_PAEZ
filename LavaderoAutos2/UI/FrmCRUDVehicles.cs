@@ -1,4 +1,5 @@
 ﻿using LavaderoAutos2.Entities;
+using LavaderoAutos2.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace LavaderoAutos2.UI
             try
             {
                 cmbType.DataSource= Enum.GetValues(typeof(VehicleType));
+                this.cleanForm();
 
             }
             catch (Exception ex)
@@ -34,7 +36,7 @@ namespace LavaderoAutos2.UI
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-
+            this.cleanForm();
 
 
 
@@ -47,12 +49,13 @@ namespace LavaderoAutos2.UI
                 Vehicle vehicle = new Vehicle();
                 vehicle.Name=txtName.Text;
                 vehicle.Brand=txtBrand.Text;
+                
+                if (txtYear.Text!="")
                 vehicle.Year =int.Parse(txtYear.Text);
+
                 vehicle.VehicleType=(VehicleType)cmbType.SelectedItem;
 
-                //terminar la funcion
-                //poner imagenes en iconos
-                // crear dal para vehicle
+                
                 return vehicle;
 
             }
@@ -83,6 +86,32 @@ namespace LavaderoAutos2.UI
                 throw;
             }
 
+        }
+
+        private void cleanForm() {
+            txtBrand.Text = "";
+            txtName.Text = "";
+            txtYear.Text = "";
+            cmbType.SelectedIndex = 0;
+
+        
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Vehicle vehicle;
+                vehicle = getVehicle();
+                VehicleService vehicleService = new VehicleService();
+                vehicleService.createVecicle(vehicle);
+                MessageBox.Show("El vehiculo ha sido creado al usuario");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

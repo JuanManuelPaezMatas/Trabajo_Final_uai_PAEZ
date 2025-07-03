@@ -32,7 +32,7 @@ namespace LavaderoAutos2.DataAccessLayer
                 this._command = new SqlCommand();
                 this._command.CommandText = query;
                 this._command.Connection = this._connection;
-                int totalFilasAfectadas;  // variable para guardar el resultado de la ejecucion
+                int totalFilasAfectadas;  
                 this._connection.Open() ;
                 totalFilasAfectadas = this._command.ExecuteNonQuery();
                 return totalFilasAfectadas;
@@ -72,7 +72,7 @@ namespace LavaderoAutos2.DataAccessLayer
         public abstract int update(IEntity entity);
         public abstract int delete(int id);
 
-        public abstract  List<IEntity> getEntities(IEntity entity);
+        public abstract  List<IEntity> getEntities(IEntity entity=null);
 
 
     }

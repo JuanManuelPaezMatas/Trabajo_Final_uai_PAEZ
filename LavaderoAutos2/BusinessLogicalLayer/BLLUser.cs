@@ -19,11 +19,10 @@ namespace LavaderoAutos2.BusinessLogicalLayer
             try
             {
                 byte[] arrayPassword;
-                arrayPassword= Encoding.UTF8.GetBytes(password);  // 1. convertir contraseña a bytes
-                SHA256 hash = SHA256.Create();                   // 2. creo un hasheador
-                byte[] hashBytes = hash.ComputeHash(arrayPassword); // 3. hasheo los bytes y obtengo la contraseña hasheada en bytes
-                passwordHasheado = BitConverter.ToString(hashBytes); //4. convierto el array hasheado de bytes a texto
-
+                arrayPassword= Encoding.UTF8.GetBytes(password);  
+                SHA256 hash = SHA256.Create();                   
+                byte[] hashBytes = hash.ComputeHash(arrayPassword); 
+                passwordHasheado = BitConverter.ToString(hashBytes);
                 return passwordHasheado ;
             }
             catch (Exception)

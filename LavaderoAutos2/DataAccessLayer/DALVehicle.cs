@@ -14,9 +14,9 @@ namespace LavaderoAutos2.DataAccessLayer
 {
     public class DALVehicle : BaseDataAccessLayer
     {
-        //copiar el singleton  de daluser
+        
         private static DALVehicle dalVehicle;
-        //Esto es commit 5
+       
         public static DALVehicle Instance
         {
             get
@@ -26,7 +26,7 @@ namespace LavaderoAutos2.DataAccessLayer
                 return dalVehicle;
             }
         }
-
+        private DALVehicle() { }
 
         public override int delete(int id)
         {
@@ -38,7 +38,7 @@ namespace LavaderoAutos2.DataAccessLayer
                 
                 textoConsulta = "DELETE vehicles WHERE  ";
                 textoConsulta += " id=@id";
-                //textoConsulta += "NULL,";
+               
                              
                 this._command.Parameters.Add(new SqlParameter("@id" , id));
                
@@ -54,7 +54,35 @@ namespace LavaderoAutos2.DataAccessLayer
 
         public override List<IEntity> getEntities(IEntity entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                this._connection = new SqlConnection(this.ConnectionString);
+                this._command = new SqlCommand();
+                this._command.Connection = this._connection;
+                this._command.CommandText = "select * from vehicles ";
+                if (entity != null)
+                {
+                    Vehicle vehicle;
+                    vehicle = (Vehicle)entity;
+                    this._command.CommandText += " name=@nombre and brand=@marca and year=@ano and vehicle_type=@tipo";
+                    this._command.Parameters.Add(new SqlParameter("@nombre",vehicle.Name));
+                    this._command.Parameters.Add(new SqlParameter("@marca", vehicle.Brand));
+                    this._command.Parameters.Add(new SqlParameter("@ano", vehicle.Year));
+                    this._command.Parameters.Add(new SqlParameter("@tipo", vehicle.VehicleType));
+
+                    
+
+
+                    
+                }
+                return null;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public override int insert(IEntity entity)
@@ -108,6 +136,8 @@ namespace LavaderoAutos2.DataAccessLayer
 
                 throw;
             }
+
+
         }
     }
 }

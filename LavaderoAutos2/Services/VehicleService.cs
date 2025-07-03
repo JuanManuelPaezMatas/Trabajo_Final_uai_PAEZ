@@ -1,4 +1,5 @@
 ﻿using LavaderoAutos2.BusinessLogicalLayer;
+using LavaderoAutos2.DataAccessLayer;
 using LavaderoAutos2.Entities;
 using System;
 using System.Collections.Generic;
@@ -23,8 +24,8 @@ namespace LavaderoAutos2.Services
 					throw new Exception("error en el vehiculo");
 
 				}
-				// implementar singleton 
-				//usar el singleton de DALvehicle
+				DALVehicle.Instance.insert(vehicle);
+
 			}
 			catch (Exception)
 			{
