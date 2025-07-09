@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LavaderoAutos2.Services;
 using LavaderoAutos2.UI;
 
 namespace LavaderoAutos2
@@ -17,7 +18,10 @@ namespace LavaderoAutos2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCRUDVehicles());
+            Form f= new FrmLogin();
+            Internationalization.Instancia.suscribir((IidiomaObserver)f);
+
+            Application.Run(f);
         }
     }
 }

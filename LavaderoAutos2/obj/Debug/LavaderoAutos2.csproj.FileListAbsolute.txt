@@ -10,3 +10,5 @@ C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAu
 C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.UI.frmLogin.resources
 C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.FrmMain.resources
 C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.UI.FrmCRUDVehicles.resources
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.UI.FrmLanguage.resources
+C:\Users\Octavio\source\repos\LavaderoAutos2\LavaderoAutos2\obj\Debug\LavaderoAutos2.UI.FrmSearchVehicle.resources

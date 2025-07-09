@@ -14,7 +14,7 @@ using LavaderoAutos2.Services;
 
 namespace LavaderoAutos2.UI
 {
-    public partial class FrmLogin : Form
+    public partial class FrmLogin : Form, IidiomaObserver,IFormObserver
     {
         public FrmLogin()
         {
@@ -43,7 +43,7 @@ namespace LavaderoAutos2.UI
         {
             try
             {
-                
+                Internationalization.Instancia.CambiarIdioma("ES");
             }
             catch (Exception)
             {
@@ -63,6 +63,8 @@ namespace LavaderoAutos2.UI
                 this.Hide();
                 
                 FrmMain frm = new FrmMain(user1);
+                Internationalization.Instancia.suscribir(frm);
+                frm.addObserver(this);
                 frm.ShowDialog();
             }
             catch (Exception ex)
@@ -73,6 +75,19 @@ namespace LavaderoAutos2.UI
             finally {
             Cursor = Cursors.Default;
             }
+        }
+
+        public void CambiarIdioma(string idioma)
+        {
+            this.Text = "Login " + idioma;
+        }
+
+        public void OnFormClosed()
+        {
+            this.Close();
+
+
+
         }
     }
 }

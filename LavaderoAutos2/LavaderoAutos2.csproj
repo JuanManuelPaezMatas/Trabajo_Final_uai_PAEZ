@@ -59,13 +59,23 @@
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Vehicle.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Services\Internationalization.cs" />
+    <Compile Include="Services\IWashingService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\VehicleService.cs" />
+    <Compile Include="Services\WashingService.cs" />
+    <Compile Include="Services\WashingServiceCombo.cs" />
     <Compile Include="UI\FrmCRUDVehicles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FrmCRUDVehicles.Designer.cs">
       <DependentUpon>FrmCRUDVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmLanguage.Designer.cs">
+      <DependentUpon>FrmLanguage.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
@@ -81,8 +91,19 @@
     <Compile Include="UI\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\IidiomaObserver.cs" />
+    <Compile Include="UI\FrmSearchVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmSearchVehicle.Designer.cs">
+      <DependentUpon>FrmSearchVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IFormObserver.cs" />
     <EmbeddedResource Include="UI\FrmCRUDVehicles.resx">
       <DependentUpon>FrmCRUDVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmLanguage.resx">
+      <DependentUpon>FrmLanguage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -98,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmSearchVehicle.resx">
+      <DependentUpon>FrmSearchVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

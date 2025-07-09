@@ -12,7 +12,9 @@ using System.Windows.Forms;
 
 namespace LavaderoAutos2.UI
 {
-    public partial class FrmCRUDVehicles : Form
+
+
+    public partial class FrmCRUDVehicles : Form, IidiomaObserver
     {
         public FrmCRUDVehicles()
         {
@@ -23,6 +25,7 @@ namespace LavaderoAutos2.UI
         {
             try
             {
+                CambiarIdioma(Internationalization.Instancia.Idioma);
                 cmbType.DataSource= Enum.GetValues(typeof(VehicleType));
                 this.cleanForm();
 
@@ -105,7 +108,33 @@ namespace LavaderoAutos2.UI
                 vehicle = getVehicle();
                 VehicleService vehicleService = new VehicleService();
                 vehicleService.createVecicle(vehicle);
-                MessageBox.Show("El vehiculo ha sido creado al usuario");
+                MessageBox.Show("El vehiculo ha sido creado ");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public void CambiarIdioma(string idioma)
+        {
+
+
+
+            this.Text = "Vehiculos " + idioma;
+
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmSearchVehicle form= new FrmSearchVehicle();
+                Internationalization.Instancia.suscribir(form);
+                form.ShowDialog();
             }
             catch (Exception ex)
             {

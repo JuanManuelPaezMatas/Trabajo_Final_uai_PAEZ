@@ -127,9 +127,12 @@ namespace LavaderoAutos2.DataAccessLayer
                 textoConsulta = "INSERT INTO users(name,user_code,password) ";
                 textoConsulta += "VALUES (";
                 //textoConsulta += "NULL,";
-                textoConsulta += "'" + user_usuario.Name + "',";
-                textoConsulta += "'" + user_usuario.UserCode + "',";
-                textoConsulta += "'" + user_usuario.Password + "')";
+                textoConsulta += "@nombre,";
+                textoConsulta += "@usuario,";
+                textoConsulta += "@contrasena";
+                this._command.Parameters.Add(new SqlParameter("@nombre", user_usuario.Name));
+                this._command.Parameters.Add(new SqlParameter("@usuario", user_usuario.UserCode));
+                this._command.Parameters.Add(new SqlParameter("@contrasena", user_usuario.Password));
                 usuariosInsertados = this.ExecuteNonQuery(textoConsulta);
                 return usuariosInsertados;
             }

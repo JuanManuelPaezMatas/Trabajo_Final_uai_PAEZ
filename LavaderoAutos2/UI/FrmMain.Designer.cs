@@ -32,6 +32,7 @@
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.btnCrudCar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.grdServiciosActivas = new System.Windows.Forms.DataGridView();
             this.grdServiciosEspera = new System.Windows.Forms.DataGridView();
             this.lblUser = new System.Windows.Forms.Label();
@@ -45,12 +46,14 @@
             this.mnuMain.BackColor = System.Drawing.Color.SteelBlue;
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCrudCar,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.btnLanguage});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Size = new System.Drawing.Size(800, 40);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "menuStrip1";
+            this.mnuMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuMain_ItemClicked);
             // 
             // btnCrudCar
             // 
@@ -65,6 +68,13 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 36);
             this.toolStripMenuItem1.Text = "CrudServicios";
+            // 
+            // btnLanguage
+            // 
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(56, 36);
+            this.btnLanguage.Text = "Idioma";
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
             // 
             // grdServiciosActivas
             // 
@@ -105,6 +115,7 @@
             this.MainMenuStrip = this.mnuMain;
             this.Name = "FrmMain";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
@@ -123,6 +134,7 @@
         private System.Windows.Forms.DataGridView grdServiciosEspera;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.ToolStripMenuItem btnLanguage;
     }
 }
 

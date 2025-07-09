@@ -69,13 +69,23 @@ namespace LavaderoAutos2.DataAccessLayer
                     this._command.Parameters.Add(new SqlParameter("@marca", vehicle.Brand));
                     this._command.Parameters.Add(new SqlParameter("@ano", vehicle.Year));
                     this._command.Parameters.Add(new SqlParameter("@tipo", vehicle.VehicleType));
-
-                    
-
-
-                    
+                                   
+                                       
                 }
-                return null;
+                this._connection.Open();
+                SqlDataReader dr = this._command.ExecuteReader();
+                List<IEntity> lst=new List<IEntity>();
+                while (dr.Read())
+                {
+                    Vehicle vehicle = new Vehicle();
+                    vehicle.Name=dr.GetString(dr.GetOrdinal("name"));
+                    vehicle.Brand = dr.GetString(dr.GetOrdinal("brand"));
+                    vehicle.Year = dr.GetInt32(dr.GetOrdinal("year"));
+                    vehicle.VehicleType = (VehicleType)dr.GetInt32(dr.GetOrdinal("vehicle_type"));
+                    lst.Add(vehicle);
+                }
+                this._connection.Close();
+                return lst;
 
             }
             catch (Exception)

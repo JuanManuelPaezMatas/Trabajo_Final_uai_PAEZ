@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 
 namespace LavaderoAutos2.Services
@@ -34,6 +35,21 @@ namespace LavaderoAutos2.Services
 			}
 
         }
+
+		public List<Vehicle> getAllVehicles() {
+			List<Vehicle> list=null;
+			try
+			{
+				list = DALVehicle.Instance.getEntities(null).OfType<Vehicle>().ToList();
+				return list;
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+
+		}
 
     }
 }
